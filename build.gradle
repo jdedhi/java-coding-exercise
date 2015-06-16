@@ -1,0 +1,47 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+sourceCompatibility = 1.7
+version = '1.0'
+mainClassName="com.sapient.Main"
+
+sourceSets {
+	main.java.srcDir "src/main"
+	test.java.srcDir "src/test"
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Sapient Coding Exercise',
+                   'Implementation-Version': version,
+                   'Main-Class': 'com.sapient.Main'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.google.inject', name: 'guice', version: '4.+'
+    compile group: 'org.slf4j', name:'slf4j-api', version: '1.7.12'
+    compile group: 'org.slf4j', name:'slf4j-simple', version: '1.7.12'
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+    testCompile "org.mockito:mockito-core:1.+" 
+}
+
+test {   
+    beforeTest { descriptor ->
+    	logger.lifecycle("Running test: " + descriptor)
+    }
+}
+
+uploadArchives {
+    repositories {
+       flatDir {
+           dirs 'repos'
+       }
+    }
+}
+

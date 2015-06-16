@@ -1,0 +1,77 @@
+Bond Prices Code Exercise:
+
+Introduction:
+This file contains a problem statement and instructions for which you
+are expected to code a solution using core Java. You have been provided
+with a skeleton project based on Gradle build conventions. 
+
+Please feel free to use an editor/IDE of your choice.  However, you are
+expected to provide a solution for which a Gradle build completes 
+successfully including unit test execution.
+
+Please make any assumptions necessary to complete the exercise and
+clearly document those assumptions in your code.
+
+
+Problem Statement:
+Note and bond prices are quoted in dollars and fractions of a dollar. 
+By market convention, the normal fraction used for Treasury security 
+prices is 1/32. 
+
+The file bond_prices.txt contains a list of Treasury bond prices.
+Each line in the file contains a price in the following format:
+[2-3 digit integer]-[2 digit integer][optional +]
+
+Examples:
+99-31
+99-31+
+100-00
+100-01
+100-01+
+100-02
+
+The - character separates the full dollar portion of the price from the 
+32nds of a dollar, which are to the right of the -.
+
+Some very active issues may be quoted in 64ths of a point. To reflect 
+this in the quote, a plus sign (+) follows the price.
+
+For example:
+100-08+ means
+$100 + 8/32 + 1/64 = $100.265625
+
+99-30 means
+$99 + 30/32 = $99.9375 
+
+
+Instructions:
+1.  Write a program that reads the prices in from the file, converts 
+    them to a decimal format, sorts the prices from lowest to highest 
+    decimal value, and then prints the sorted price list to the console.
+
+     For example:
+     100-08 should be converted as 100 + 8/32 = 100.25 and rendered as $100.25
+
+     A price list consisting of
+     100-16
+     100-08
+     101-09+
+
+     Should be output as:
+     $100.25
+     $100.50
+     $101.296875
+
+2.  Create a unit test that verifies your code parses and converts prices correctly.
+    You can expect that the sum of the converted decimal price values is 5000.00
+
+
+Evaluation Criteria
+Your code will be scored on the basis of:
+1.  Completeness and correctness
+2.  Code Structure - application of basic object oriented design principles
+3.  How well you demonstrate usage of core Java API
+4.  Unit testing
+
+
+
