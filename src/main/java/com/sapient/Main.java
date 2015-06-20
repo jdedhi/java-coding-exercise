@@ -99,21 +99,4 @@ public class Main {
 }
 
 
-/* TODO:
- * --create junit tests
- * --write mockito objects
- * --learn why juice is better than spring
- * --learn agile terminology
- * --learn github and publish project
- * 
- * PARTIALLY COMPLETE
- * --fix the gradle script to use uploadArchives
- * --integrate gradle into eclipse
- * 
- * COMPLETE
- * --integrate junit into eclipse
- * --run the gradle built jar from command line -- runs using gradle
- * --figure out how gradle can provide dependent libraries to you for running -- may be not needed as it runs via gradle
- * --run junit tests via gradle
- * --write the main program
- */
+
